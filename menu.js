@@ -77,16 +77,18 @@ var b=parseInt(prompt("Inroduce b"));
 var c=parseInt(prompt("Inroduce c"));	
 function x1(a, b, c,r)
 {
-
+if(a !=0){
 r=b*b-4*a*c;
 
 if(r>0){
 return(-b + Math.sqrt(r))/(2*a);
 }
 else{
-	console.log("La ecuacion no tiene solucion real");
+	console.log("Las raices son numeros complejos");
 }
-
+}else{
+	console.log("No corresponde a una ecuacion de 2do grado");
+}
 
 }
 var ram=x1(a,b,c);
@@ -94,15 +96,17 @@ console.log(`x1: ${ram}`);
 
 function x2(a, b, c,r)
 {
-
+if(a !=0){
 r=b*b- 4*a*c;
 if(r>=0){
 return(-b - Math.sqrt(r))/(2*a);
 }
 else{
-console.log("La ecuacion no tiene solucion real");
+console.log("Las raices son numeros complejos");
 }
-
+}else{
+	console.log("No corresponde a una ecuacion de 2do grado");
+}
 }
 var r2=x2(a,b,c);
 console.log(`x2: ${r2}`);
