@@ -75,16 +75,39 @@ case 6:
 var a=parseInt(prompt("Inroduce a"));	
 var b=parseInt(prompt("Inroduce b"));
 var c=parseInt(prompt("Inroduce c"));	
-function x1(a, b, c)
+function x1(a, b, c,r)
 {
-	return(((-1)*b) +(Math.sqrt(Math.pow(b,2)-(4*a*c))))/(2*a);
-}
-var r=x1(a,b,c);
-console.log(`x1: ${r}`);
+if(a !=0){
+r=b*b-4*a*c;
 
-function x2(a, b, c)
+if(r>=0){
+return(-b + Math.sqrt(r))/(2*a);
+}
+else{
+	console.log("Las raiz es compleja");
+}
+}
+else{
+	console.log("El valor no corresponde  a una ecuacion de segundo grado")
+}
+}
+var ram=x1(a,b,c);
+console.log(`x1: ${ram}`);
+
+function x2(a, b, c,r)
 {
-	return(((-1)*b) -(Math.sqrt(Math.pow(b,2)-(4*a*c))))/(2*a);
+if(a !=0){
+r=b*b- 4*a*c;
+if(r>=0){
+return(-b - Math.sqrt(r))/(2*a);
+}
+else{
+console.log("Las raices son complejas");
+}
+}
+else{
+console.log("Los valores no corresponden  a una ecuacion de segundo grado")
+}
 }
 var r2=x2(a,b,c);
 console.log(`x2: ${r2}`);
@@ -105,7 +128,7 @@ function binomio2(a,b){
 	return(Math.pow(a,2)-(2*a*b)+(Math.pow(b,2)));
 }
 var r3=binomio2(nac1,nac2);
-console.log(`(a-b)^2: ${r3}`);
+console.log(`(a+b)^2: ${r3}`);
 
 
 
