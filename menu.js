@@ -128,7 +128,7 @@ function binomio2(a,b){
 	return(Math.pow(a,2)-(2*a*b)+(Math.pow(b,2)));
 }
 var r3=binomio2(nac1,nac2);
-console.log(`(a+b)^2: ${r3}`);
+console.log(`(a-b)^2: ${r3}`);
 
 
 
